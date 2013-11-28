@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">  
+<properties>  
+    <!--  
+     passTypeIdentifier;//用于下载和更新用(和apple统一)
+     serialNumber;//用于下载和更新用(主键)(和apple统一)
+     authenticationToken;//用于下载和更新用(和apple统一)
+     type; //优惠劵类型
+     allMessage;//保存全部json串（方便以后升级）
+     locations;//经纬度的json数组
+     relevantDate;//日期时间
+     organizationName;//组织名，可能需要用其进行排序，也要用其显示在时间的提醒上
+     webServiceURL;//更新URL
+     lastUpdateTime//最后更新时间
+     folderName;//网络下载时生成文件夹的名字
+     autoUpdate;//是否自动更新
+     status;//表的信息状态
+    -->
+    <comment>示例相关操纵sql语句，建表语句</comment>
+    <!-- 建立信息表 -->
+    <entry key="tickets.create">
+        <![CDATA[
+         CREATE TABLE IF NOT EXISTS [tickets] (
+         	[serialNumber] TEXT PRIMARY KEY,
+         	[passTypeIdentifier] TEXT NOT NULL,
+         	[authenticationToken] TEXT NOT NULL, 
+         	[type] INTEGER,
+         	[allMessage] TEXT,
+			[locations] TEXT,
+			[relevantDate] TEXT,
+			[organizationName] TEXT,
+			[webServiceURL] TEXT,
+			[lastUpdateTime] TEXT,
+			[folderName] TEXT,
+			[autoUpdate] INTEGER DEFAULT 1,
+			[status] INTEGER DEFAULT 0
+			)
+		]]>
+    </entry> 
+    
+    <entry key="tickets.delete">
+        <![CDATA[
+         DELETE from [tickets] 
+		]]>
+    </entry>
+    
+    <entry key="tickets.update.addstatus">
+        <![CDATA[
+         ALTER TABLE tickets ADD COLUMN status INTEGER;
+		]]>
+    </entry>
+    
+    <entry key="tickets.update.addstatus.default">
+        <![CDATA[
+         UPDATE tickets SET status = 1;
+		]]>
+    </entry>
+    
+    <!--push通知的提醒表-->
+    <entry key="notification.create">
+        <![CDATA[
+         CREATE TABLE IF NOT EXISTS [notification] (
+         	[serialNumber] TEXT NOT NULL,
+         	[passTypeIdentifier] TEXT NOT NULL,
+         	[logoText] TEXT, 
+         	[changeMessage] TEXT , 
+			[notifyFlag] INTEGER DEFAULT 1
+			)
+		]]>
+    </entry>
+    <!--push通知的删除-->
+    <entry key="notification.delete">
+        <![CDATA[
+         DELETE from [notification]
+		]]>
+    </entry>
+</properties> 

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bg" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="back"
+            android:padding="10dp"
+            android:src="@drawable/back_btn_selector" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:onClick="delete"
+            android:padding="10dp"
+            android:src="@drawable/delete_btn_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/detail_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/top_border"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/coupon_top_bg" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_border"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/coupon_bottom_bg" >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_border"
+            android:layout_below="@+id/top_border"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <FrameLayout
+                android:id="@+id/status_bar_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <ImageButton
+                    android:id="@+id/reload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:onClick="refresh"
+                    android:padding="10dp"
+                    android:src="@drawable/reload" />
+
+                <LinearLayout
+                    android:id="@+id/status_bar_t"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="invisible" >
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_marginRight="10dp"/>
+
+                    <TextView
+                        android:id="@+id/status_bar_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:singleLine="true"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/status_bar_area"
+                android:background="@drawable/outer_box"
+                android:padding="10dp" >
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/autoUpdate_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/filled_box"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/auto_update"
+                                android:textColor="@android:color/darker_gray"
+                                android:textSize="18sp" />
+
+                            <CheckBox
+                                android:id="@+id/autoUpdateView"
+                                style="@style/checkbox"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/detail_field"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/filled_box"
+                            android:orientation="vertical"
+                            android:padding="10dp" >
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

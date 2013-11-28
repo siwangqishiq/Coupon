@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="primary_field_height">112dp</dimen>
+    <dimen name="list_item_height">60dp</dimen>
+    <dimen name="qrcode_size">120dp</dimen>
+    <dimen name="qrcode_padding">4dp</dimen>
+    
+    <dimen name="logo_size">50dp</dimen>
+    <dimen name="primary_label_size">25sp</dimen>
+    <dimen name="ticket_label_size">12sp</dimen>
+    <dimen name="ticket_value_size">15sp</dimen>
+    
+</resources>

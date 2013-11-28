@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!--<PreferenceCategory android:title="@string/settings_service" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="setLocService"
+            android:summaryOff="@string/settings_service_off"
+            android:summaryOn="@string/settings_service_on"
+            android:title="@string/settings_service_title" />
+    </PreferenceCategory>
+--></PreferenceScreen>

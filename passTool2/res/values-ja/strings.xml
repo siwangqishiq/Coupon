@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app">Passbook</string>
+    <string name="app_name">Passbook</string>
+    <string name="auto_update">自動更新</string>
+    <string name="remind_title">近所通知</string>
+    <string name="dialog_title">知らせ</string>
+    <string name="dialog_msg">データ更新中、しばらく待ちください。</string>
+    <string name="dialog_delete_title">このパスを削除しますか？</string>
+    <string name="dialog_confirm">確認</string>
+    <string name="dialog_cancel">キャンセル</string>
+    <string name="dialog_update">新バージョンの発見</string>
+    <string name="dialog_update_confirm">アップデート</string>
+    <string name="dialog_update_cancel">更新しないでください</string>
+    <string name="notify_apk_download_success">Passbookダウンロードの終了</string>
+    <string name="notify_apk_install">インストールのためにクリック</string>
+    <string name="process_networker">接続されている...</string>
+    <string name="process_downloading">ダウンロードしています</string>
+    <string name="process_busy">ダウンロードしています，しばらくお待ちください</string>
+    <string name="no_sd_error">SDカードを見つかれませんでした。SDカードを本体に差し入れて、もう一回インストールしてください。</string>
+    <string name="network_error">読み込み失敗，インターネットの接続環境を確認してください</string>
+    <string name="format_error">読み込み失敗，ファイルが無効である可能性があります。。</string>
+    <string name="register_error">読み込み失敗，インターネットの接続環境を確認してください</string>
+    <string name="persist_error">読み込み失敗，SDカードの容量を確認してください。</string>
+    <string name="insert_success">読み込み成功</string>
+    <string name="update_success">更新成功しました</string>
+    <string name="update_noneed">すべてのパスを更新済みました</string>
+    <string name="delete_success">削除成功</string>
+    <string name="delete_fail">削除失敗</string>
+    <string name="preset_address"></string>
+<!--     http://emms.airad.com/passbook/down/xiduowu.pkpass -->
+    <string name="gps_provider">google</string>
+	<string name="update_error">更新に失敗しました</string>
+	<string name="dialog_try_again">もう一度試す？</string>
+    <string name="btn_yes">はい</string>
+    <string name="btn_no">キャンセル</string>
+    <string name="process_downloading_apk">ダウンロードして応用</string>
+</resources>

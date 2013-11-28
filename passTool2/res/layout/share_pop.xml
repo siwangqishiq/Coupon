@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/share"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/share_weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/friend_share"
+            android:gravity="center_horizontal"
+            android:text="@string/weixin_frind_group"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+        
+        <TextView
+            android:id="@+id/share_weixin_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/weixin_icon"
+            android:gravity="center_horizontal"
+            android:text="@string/weixin_friend"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/share_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawablePadding="5dp"
+            android:drawableTop="@drawable/message_share"
+            android:gravity="center_horizontal"
+            android:text="@string/messgae"
+            android:textColor="#000000"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/wei_xin_icon" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/closePopWindow"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="@string/dialog_cancel" />
+
+</LinearLayout>
